@@ -61,6 +61,8 @@ _Screenshot 3: VM settings including processors and EFI enabled._
 
 _Screenshot 4: Ubuntu installation on the VM._
 
+![VirtualBox](screenshot_4.png)
+
 ## 5. VM Snapshot Management
 
 - **Task**: Create a snapshot of the VM, perform some tasks, and then restore the snapshot.
@@ -70,6 +72,8 @@ _Screenshot 4: Ubuntu installation on the VM._
   3. Restored the VM to the snapshot and confirmed that changes were reverted.
 
 _Screenshot 5: Creating and managing VM snapshots._
+![alt text](image.png)
+
 
 ## 6. Changing VM Parameters
 
