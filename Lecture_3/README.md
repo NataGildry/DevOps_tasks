@@ -47,7 +47,7 @@ _Screenshot 2: Configuration of the new VM._
   3. Enabled EFI under the "Motherboard" tab.
   4. Configured the network adapter to use a Bridged Adapter for direct network access.
 
-_Screenshot 3: VM settings including processors and EFI enabled._
+_Screenshot 3: VM settings - network adapter to use a Bridged Adapter._
 
 ![VirtualBox](screenshot_3.png)
 
@@ -108,7 +108,7 @@ _Screenshot 8: Changes in disk size._
    - Find the partition you want to resize. Right-click on it and select "Resize/Move."
     ![alt text](image-9.png)
 
-    - Adjust the size to use the unallocated space and apply the changes
+  - Adjust the size to use the unallocated space and apply the changes
     ![alt text](image-10.png)
 
   4. Adjusted the CPU cores to 4 and RAM to 4 GB in the system settings.
@@ -127,7 +127,7 @@ _Screenshot 8: Changes in disk size._
 ![alt text](image-1.png)
 3. Create Mount Point
   ```bash sudo mkdir -p /mnt/shared ```
-  Manually Mount
+  - Manually Mount
     ```bash sudo mount -t vboxsf Shared /mnt/shared ```
 ![alt text](image-2.png)
 
@@ -139,9 +139,11 @@ _Screenshot 8: Changes in disk size._
   2. Deleted the VM from VirtualBox, ensuring all files were removed.
 
 _Screenshot 9: Deleting the VM in VirtualBox._
+![alt text](image-4.png)
 
 ## Conclusion
 
 Throughout this process, I was able to successfully create, configure, and manage a virtual machine using VirtualBox. The use of snapshots provided a reliable method for system recovery after changes. Adjusting system resources through the VirtualBox interface proved to be straightforward, with all changes effectively applied without data loss.
 
+Made with 🤍 by Nataliia 
 ---
