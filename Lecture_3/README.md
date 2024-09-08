@@ -55,13 +55,13 @@ _Screenshot 3: VM settings including processors and EFI enabled._
 
 - **Task**: Install the latest LTS version of Ubuntu on the VM.
 - **Steps**:
-  1. Downloaded the latest Ubuntu LTS ISO from the official [Ubuntu website](https://ubuntu.com/download).
+  1. Downloaded the Ubuntu ISO from the official [Ubuntu website](https://ubuntu.com/download).
   2. Added the ISO as an optical disk in the VM settings.
   3. Started the VM and completed the Ubuntu installation process.
 
 _Screenshot 4: Ubuntu installation on the VM._
 
-![VirtualBox](screenshot_4.png)
+![alt text](screenshot_4.png)
 
 ## 5. VM Snapshot Management
 
@@ -72,8 +72,13 @@ _Screenshot 4: Ubuntu installation on the VM._
   3. Restored the VM to the snapshot and confirmed that changes were reverted.
 
 _Screenshot 5: Creating and managing VM snapshots._
-![alt text](image.png)
+![alt text](screenshot_5.png)
 
+_Screenshot 6: Changed VM state._
+![alt text](screenshot_6.png)
+
+_Screenshot 7: Restored VM to the snapshot
+![alt text](screenshot_7.png)
 
 ## 6. Changing VM Parameters
 
@@ -84,11 +89,32 @@ _Screenshot 5: Creating and managing VM snapshots._
 
 - **Steps**:
   1. Powered off the VM and accessed the storage settings.
-  2. Resized the hard disk to 30 GB using the resize option.
-  3. Expanded the filesystem in Ubuntu to utilize the additional disk space.
+  2. Resized the hard disk to 30 GB.
+
+_Screenshot 8: Changes in disk size._
+![alt text](image-8.png)
+
+  3. Resize the Partition Inside the VM.
+   - Current partition and disk space
+   ```bash df -h ```
+
+   ![alt text](image-6.png)
+
+   - Install GParted if not available
+  ```bash sudo apt update sudo apt install gparted ```
+
+   ![alt text](image-7.png)
+
+   - Find the partition you want to resize. Right-click on it and select "Resize/Move."
+    ![alt text](image-9.png)
+
+    - Adjust the size to use the unallocated space and apply the changes
+    ![alt text](image-10.png)
+
   4. Adjusted the CPU cores to 4 and RAM to 4 GB in the system settings.
 
-_Screenshot 6: Changes in CPU cores, RAM, and disk size._
+  _Screenshot 9: Changes in CPU cores, RAM._
+  ![alt text](image-5.png)
 
 ## 7. VM Shutdown and Deletion
 
@@ -97,7 +123,7 @@ _Screenshot 6: Changes in CPU cores, RAM, and disk size._
   1. Powered off the VM via the Ubuntu interface.
   2. Deleted the VM from VirtualBox, ensuring all files were removed.
 
-_Screenshot 7: Deleting the VM in VirtualBox._
+_Screenshot 9: Deleting the VM in VirtualBox._
 
 ## Conclusion
 
