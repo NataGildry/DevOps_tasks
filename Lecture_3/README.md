@@ -116,7 +116,22 @@ _Screenshot 8: Changes in disk size._
   _Screenshot 9: Changes in CPU cores, RAM._
   ![alt text](image-5.png)
 
-## 7. VM Shutdown and Deletion
+ ## 7. Shared Folders Setup
+
+**Task:** Create a shared folder between the host and the virtual machine.
+### Steps:
+
+1. Create a Directory on the Host Machine that will act as the shared folder: 
+  ![alt text](image-3.png)
+2. Configure Shared Folder in VirtualBox
+![alt text](image-1.png)
+3. Create Mount Point
+  ```bash sudo mkdir -p /mnt/shared ```
+  Manually Mount
+    ```bash sudo mount -t vboxsf Shared /mnt/shared ```
+![alt text](image-2.png)
+
+## 8. VM Shutdown and Deletion
 
 - **Task**: Properly shut down and delete the VM along with associated files.
 - **Steps**:
