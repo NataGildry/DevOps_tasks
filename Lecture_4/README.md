@@ -44,3 +44,9 @@ _Screenshot 1: Configuration of the new VM._
 
 _Screenshot 2: Shared folder inside the VM._
 ![alt text](image-1.png)
+
+_Screenshot 3: 3 VM created._
+![alt text](Screenshot.png)
+
+_Screenshot 3: Access to the nginx server._
+![alt text](image-3.png)
