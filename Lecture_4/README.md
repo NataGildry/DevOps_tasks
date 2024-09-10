@@ -33,7 +33,7 @@ Make sure the following software is installed on your system:
 
 ## Provisioning
 
-The virtual machine will automatically install Apache2 during provisioning. You can verify that Apache is running by accessing the public IP address of the VM.
+The virtual machine will automatically install nginx during provisioning. You can verify that nginx is running by accessing the public IP address of the VM.
 
 To check the IP address inside the VM, use the following command:
 ```bash
