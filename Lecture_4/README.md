@@ -46,7 +46,7 @@ _Screenshot 2: Shared folder inside the VM._
 ![alt text](image-1.png)
 
 _Screenshot 3: 3 VM created._
-![alt text](Screenshot.png)
+![alt text](image-2.png)
 
 _Screenshot 3: Access to the nginx server._
 ![alt text](image-3.png)
