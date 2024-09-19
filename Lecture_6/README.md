@@ -21,7 +21,7 @@ Before starting, make sure you have the following:
 
 ### 1. Install and Configure Nginx from Official Repository
 
-To install and configure the Nginx web server, follow these steps:
+Install and configure the Nginx web server:
 
 ```bash
 sudo apt update
@@ -29,7 +29,27 @@ sudo apt install nginx
  ```
 
  _Screenshot 1: Nginx web server installed and running._
- 
+
+ ### 2. Add and Remove Nginx PPA Repository
+
+Switch to a PPA repository for Nginx:
+
+```bash
+sudo apt install software-properties-common
+sudo add-apt-repository ppa:nginx/stable
+sudo apt update
+ ```
+
+ _Screenshot 2: Nginx PPA repository added successfully._
+
+
+ Remove the PPA and revert to the official version:
+
+```bash
+sudo apt install ppa-purge
+sudo ppa-purge ppa:nginx/stable
+ ```
+
 
 ## Conclusion
 
