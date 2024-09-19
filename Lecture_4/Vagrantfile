@@ -1,0 +1,34 @@
+Vagrant.configure("2") do |config|
+
+  def configure_vm(config, name, ip: nil, bridge: nil)
+    config.vm.define name do |vm|
+      vm.vm.box = "generic/debian12"
+      vm.vm.provider "virtualbox" do |vb|
+        vb.name = "#{name}-vm"
+        vb.memory = "1024"
+        vb.cpus = 1
+      end
+
+      if bridge
+        vm.vm.network "public_network", bridge: bridge
+      elsif ip
+        vm.vm.network "private_network", ip: ip
+      else
+        vm.vm.network "public_network"
+      end
+
+      vm.vm.synced_folder "C:/Shared", "/mnt/shared"
+      vm.vm.provision "shell", path: "install_script.sh"
+    end
+  end
+
+  # VM1
+  configure_vm(config, "webserver")
+
+  # VM2
+  configure_vm(config, "privateserver", ip: "192.168.50.4")
+
+  # VM3
+  configure_vm(config, "publicserver", bridge: "Realtek RTL8822CE 802.11ac PCIe Adapter")
+
+end
