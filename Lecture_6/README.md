@@ -4,52 +4,28 @@ This project provides a step-by-step guide to set up an Nginx web server, config
 ## Prerequisites
 
 Before starting, make sure you have the following:
-- Ubuntu/Debian-based Linux distribution.
+- Ubuntu-based Linux distribution.
 - Sudo/root access to install and configure software.
-- Basic knowledge of terminal commands.
 
 ## Steps Overview
 
 1. **Install and Configure Nginx from Official Repository**
-2. **Add and Remove Nginx PPA Repository**
-3. **Create a Custom Systemd Service**
-4. **Set Up UFW (Uncomplicated Firewall)**
-5. **Configure Fail2Ban for SSH Protection**
-6. **Create and Mount a New Disk Partition**
+2. **Add Nginx PPA Repository**
+3. **Remove the PPA and revert to the official version**
 
 ---
 
 ### 1. Install and Configure Nginx from Official Repository
+ _Screenshot 1: Nginx web server installed from the official repo._
+ ![alt text](image.png)
 
-Install and configure the Nginx web server:
-
-```bash
-sudo apt update
-sudo apt install nginx
- ```
-
- _Screenshot 1: Nginx web server installed and running._
-
- ### 2. Add and Remove Nginx PPA Repository
-
-Switch to a PPA repository for Nginx:
-
-```bash
-sudo apt install software-properties-common
-sudo add-apt-repository ppa:nginx/stable
-sudo apt update
- ```
-
+ ### 2. Add Nginx PPA Repository
  _Screenshot 2: Nginx PPA repository added successfully._
+![alt text](image-1.png)
 
-
- Remove the PPA and revert to the official version:
-
-```bash
-sudo apt install ppa-purge
-sudo ppa-purge ppa:nginx/stable
- ```
-
+ ### 3. Remove the PPA and revert to the official version
+ _Screenshot 3: Nginx reverted to the official version successfully._
+![alt text](image-2.png)
 
 ## Conclusion
 
