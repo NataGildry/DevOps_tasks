@@ -1,3 +1,5 @@
+#!/bin/bash
+
 LOGFILE="/var/log/nginx_install.log"
 echo "Updating package list..." | tee -a $LOGFILE
 sudo apt-get update | tee -a $LOGFILE

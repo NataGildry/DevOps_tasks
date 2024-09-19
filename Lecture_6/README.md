@@ -34,6 +34,10 @@ Before starting, make sure you have the following:
 1. **Install and Configure Nginx from Official Repository**
 2. **Add Nginx PPA Repository**
 3. **Remove the PPA and revert to the official version**
+4. **Create a Custom Systemd Service**
+5. **Set Up UFW (Uncomplicated Firewall)**
+6. **Configure Fail2Ban for SSH Protection**
+7. **Create and Mount a New Disk Partition**
 
 ---
 
@@ -48,6 +52,17 @@ Before starting, make sure you have the following:
  ### 3. Remove the PPA and revert to the official version
  _Screenshot 3: Nginx reverted to the official version successfully._
 ![alt text](image-2.png)
+
+ ### 4. Create a Custom Systemd Service
+
+Run the following command to check the log file:
+
+    ``` bash 
+     cat /var/log/my_script.log
+    ```
+
+  _Screenshot 4: Time logs from the Custom Systemd Service ._
+![alt text](image-5.png)
 
 ## Conclusion
 
