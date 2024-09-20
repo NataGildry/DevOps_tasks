@@ -5,17 +5,14 @@ BLOCK_IP="203.0.113.42"  # IP to block from SSH
 
 LOGFILE="/var/log/firewall_fail2ban_setup.log"
 
-# Start logging
 echo "Starting UFW and Fail2Ban setup..." | tee -a $LOGFILE
-
-# Update package list
 echo "Updating package list..." | tee -a $LOGFILE
 if ! sudo apt-get update -y | tee -a $LOGFILE; then
   echo "Error: Failed to update package list." | tee -a $LOGFILE
   exit 1
 fi
 
-# Install UFW (Uncomplicated Firewall)
+# Install UFW
 echo "Installing UFW..." | tee -a $LOGFILE
 if ! sudo apt-get install ufw -y | tee -a $LOGFILE; then
   echo "Error: Failed to install UFW." | tee -a $LOGFILE
@@ -83,12 +80,10 @@ if ! sudo fail2ban-client status sshd | tee -a $LOGFILE; then
   exit 1
 fi
 
-# Disable Fail2Ban at the end of the script
 echo "Disabling Fail2Ban to work with the machine..." | tee -a $LOGFILE
 if ! sudo systemctl stop fail2ban | tee -a $LOGFILE; then
   echo "Error: Failed to stop Fail2Ban service." | tee -a $LOGFILE
   exit 1
 fi
 
-# Completion message
 echo "Firewall and Fail2Ban setup completed successfully, Fail2Ban is now disabled for easier access." | tee -a $LOGFILE
