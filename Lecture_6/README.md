@@ -64,8 +64,10 @@ Run the following command to check the log file:
   _Screenshot 4: Time logs from the Custom Systemd Service ._
 ![alt text](image-5.png)
 
-## Conclusion
+ ### 5. Set Up UFW (Uncomplicated Firewall)
 
+  _Screenshot 5: UFW is running ._
+![alt text](image-4.png)
 
 Made with 🤍 by Nataliia 
 ---
