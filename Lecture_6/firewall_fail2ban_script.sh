@@ -80,10 +80,10 @@ if ! sudo fail2ban-client status sshd | tee -a $LOGFILE; then
   exit 1
 fi
 
-echo "Disabling Fail2Ban to work with the machine..." | tee -a $LOGFILE
-if ! sudo systemctl stop fail2ban | tee -a $LOGFILE; then
-  echo "Error: Failed to stop Fail2Ban service." | tee -a $LOGFILE
-  exit 1
-fi
+# echo "Disabling Fail2Ban to work with the machine..." | tee -a $LOGFILE
+# if ! sudo systemctl stop fail2ban | tee -a $LOGFILE; then
+#   echo "Error: Failed to stop Fail2Ban service." | tee -a $LOGFILE
+#   exit 1
+# fi
 
 echo "Firewall and Fail2Ban setup completed successfully, Fail2Ban is now disabled for easier access." | tee -a $LOGFILE
