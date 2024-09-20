@@ -14,7 +14,7 @@ Before starting, make sure you have the following:
 1. Clone this repository to your local machine.
     ```bash
     git clone https://github.com/NataGildry/DevOps_tasks.git
-    cd DevOps_tasks/Lecture_4
+    cd DevOps_tasks/Lecture_6
     ```
 
 2. Ensure the shared folder path on your host machine is correctly set in the `Vagrantfile`.
