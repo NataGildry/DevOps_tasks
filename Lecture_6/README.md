@@ -69,5 +69,16 @@ Run the following command to check the log file:
   _Screenshot 5: UFW is running ._
 ![alt text](image-4.png)
 
+ ### 7. Create and Mount a New Disk Partition
+
+ After the VM is up, SSH into it and check if the partition is mounted:
+
+    ``` bash 
+     df -h
+    ```
+
+  _Screenshot 6: **/dev/sdb1:** the new partition is mounted ._
+![alt text](image-6.png)
+
 Made with 🤍 by Nataliia 
 ---
