@@ -1,0 +1,33 @@
+version: '3'
+services:
+  web:
+    image: nginx
+    volumes:
+      - web-data:/usr/share/nginx/html
+    networks:
+      - appnet
+    ports:
+      - "8080:80"
+
+  db:
+    image: postgres
+    environment:
+      POSTGRES_USER: postgres        
+      POSTGRES_PASSWORD: 1234  
+      POSTGRES_DB: dev_db  
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    networks:
+      - appnet
+
+  cache:
+    image: redis
+    networks:
+      - appnet
+
+volumes:
+  db-data:
+  web-data:
+
+networks:
+  appnet:
