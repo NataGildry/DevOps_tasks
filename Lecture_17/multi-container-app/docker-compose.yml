@@ -1,33 +1,43 @@
-version: '3'
 services:
   web:
     image: nginx
     volumes:
-      - web-data:/usr/share/nginx/html
+      - web-data:/usr/share/nginx/html  # Serve static content from the web-data volume
+      - ./nginx_conf/default.conf:/etc/nginx/conf.d/default.conf
+    networks:
+      - appnet
+    deploy:
+      replicas: 3  # Scale the web service to 3 replicas
+    # No ports needed here as they will be accessed through the reverse proxy
+
+  reverse_proxy:
+    image: nginx:latest
+    volumes:
+      - ./nginx_conf/reverse_proxy.conf:/etc/nginx/conf.d/reverse_proxy.conf
     networks:
       - appnet
     ports:
-      - "8080:80"
+      - "8080:80"  # Expose port 8080 to access the reverse proxy from outside
 
   db:
-    image: postgres
+    image: postgres  
     environment:
       POSTGRES_USER: postgres        
       POSTGRES_PASSWORD: 1234  
       POSTGRES_DB: dev_db  
     volumes:
-      - db-data:/var/lib/postgresql/data
+      - db-data:/var/lib/postgresql/data  
     networks:
       - appnet
 
   cache:
-    image: redis
+    image: redis  
     networks:
       - appnet
 
 volumes:
-  db-data:
-  web-data:
+  db-data:  # Volume for PostgreSQL data
+  web-data:  # Volume for web service static content
 
 networks:
-  appnet:
+  appnet:  # Custom network for the application services
