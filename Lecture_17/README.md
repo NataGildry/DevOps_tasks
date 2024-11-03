@@ -151,7 +151,7 @@ Open your browser and navigate to [http://localhost:8080](http://localhost:8080)
 ![docker volume ls](![docker volume ls](image-4.png))
 ![db connection](![db connection](image-3.png))
 ![docker-compose up -d --scale web=3](![docker-compose up -d --scale web=3](image-5.png))
-![docker-compose ps](![docker-compose ps](image-6.png))
+![docker-compose ps](![docker-compose ps](image-7.png))
 
 ## Conclusion
 
