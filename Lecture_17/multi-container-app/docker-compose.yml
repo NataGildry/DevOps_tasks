@@ -7,7 +7,7 @@ services:
     networks:
       - appnet
     deploy:
-      replicas: 3  # Scale the web service to 3 replicas
+      replicas: 3
     # No ports needed here as they will be accessed through the reverse proxy
 
   reverse_proxy:
@@ -36,8 +36,8 @@ services:
       - appnet
 
 volumes:
-  db-data:  # Volume for PostgreSQL data
-  web-data:  # Volume for web service static content
+  db-data: 
+  web-data: 
 
 networks:
   appnet:  # Custom network for the application services
